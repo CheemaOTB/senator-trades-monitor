@@ -32,7 +32,7 @@ def main(senator):
     resp = requests.get(f'https://api.capitoltrades.com/senators/trades/{senatorNumber}/false?pageSize=20&pageNumber=1', headers=headers, proxies=proxies).json()
 
     # Check if resp is already in data.txt
-    for i in range(0,6,1): 
+    for i in range(6,0,-1): 
         with open('data.txt') as f:
             if str(resp[i]) in f.read():
                 pass
